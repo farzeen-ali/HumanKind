@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="bg-gray-800 text-gray-300 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div>
-          <p>&copy; 2024 Your Company. All rights reserved.</p>
+          <p>&copy; 2024 HumanKind Fundraising. All rights reserved.</p>
         </div>
         <div>
           <a href="#" className="mr-4 hover:text-white">Home</a>

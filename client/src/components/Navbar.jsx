@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Navbar = () => {
   const menuItems = [
     { text: 'Home', href: '#' },
@@ -6,25 +8,25 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gray-800 shadow-lg">
+    <nav className="bg-gray-900 shadow-lg">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center">
-          <a href="#" className="text-white text-2xl font-bold">Logo</a>
+          <a href="#" className="text-white text-2xl font-bold hover:text-gray-300 transition duration-300">Logo</a>
         </div>
         <div className="hidden md:flex space-x-4">
           {menuItems.map((item, index) => (
-            <a key={index} href={item.href} className="text-white">
+            <a key={index} href={item.href} className="text-gray-300 hover:text-white transition duration-300">
               {item.text}
             </a>
           ))}
         </div>
-        <div className="md:flex items-center">
-          <button className="bg-blue-500 hover:bg-blue-700 m-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Login</button>
-          <button className="bg-blue-500 hover:bg-blue-700  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Register</button>
+        <div className="md:flex items-center space-x-4">
+          <button className="bg-blue-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Login</button>
+          <button className="bg-blue-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Register</button>
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default Navbar;
