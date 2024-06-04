@@ -1,10 +1,11 @@
 import React from 'react';
+import { HomeIcon, InformationCircleIcon, MailIcon } from '@heroicons/react/outline';
 
 const Navbar = () => {
   const menuItems = [
-    { text: 'Home', href: '#' },
-    { text: 'About', href: '#' },
-    { text: 'Contact', href: '#' },
+    { icon: <HomeIcon className="h-6 w-6" />, href: '#', text: 'Home' },
+    { icon: <InformationCircleIcon className="h-6 w-6" />, href: '#', text: 'About' },
+    { icon: <MailIcon className="h-6 w-6" />, href: '#', text: 'Contact Us' },
   ];
 
   return (
@@ -15,13 +16,14 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-4">
           {menuItems.map((item, index) => (
-            <a key={index} href={item.href} className="text-gray-300 hover:text-white transition duration-300">
-              {item.text}
+            <a key={index} href={item.href} className="text-gray-300 hover:text-white transition duration-300 flex items-center">
+              {item.icon}
+              <span className="ml-2 opacity-0 absolute transition duration-300">{item.text}</span>
             </a>
           ))}
         </div>
         <div className="md:flex items-center space-x-4">
-          <button className="bg-blue-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Login</button>
+          <button className="bg-npo-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Login</button>
           <button className="bg-blue-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Register</button>
         </div>
       </div>
