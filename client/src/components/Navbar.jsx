@@ -1,5 +1,8 @@
 import React from 'react';
 import { HomeIcon, InformationCircleIcon, MailIcon } from '@heroicons/react/outline';
+import Image from 'next/image';
+import logoImage from '../../public/assets/humankind_cropped-removebg-preview.png';
+
 
 const Navbar = () => {
   const menuItems = [
@@ -11,20 +14,27 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 shadow-lg">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <div className="flex items-center">
-          <a href="#" className="text-white text-2xl font-bold hover:text-gray-300 transition duration-300">Logo</a>
-        </div>
-        <div className="hidden md:flex space-x-4">
+        <a href="#" className="flex items-center">
+         
+            <Image src={logoImage} alt="logo" width={70} height={100}/>
+          
+        </a>
+        <div className="hidden md:flex space-x-8">
           {menuItems.map((item, index) => (
-            <a key={index} href={item.href} className="text-gray-300 hover:text-white transition duration-300 flex items-center">
+            <a
+              key={index}
+              href={item.href}
+              className="text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2"
+            >
               {item.icon}
-              <span className="ml-2 opacity-0 absolute transition duration-300">{item.text}</span>
+              <span className="ml-2">{item.text}</span>
             </a>
           ))}
         </div>
         <div className="md:flex items-center space-x-4">
-          <button className="bg-npo-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Login</button>
-          <button className="bg-blue-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Register</button>
+          <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-300">
+            Connect Wallet
+          </button>
         </div>
       </div>
     </nav>
