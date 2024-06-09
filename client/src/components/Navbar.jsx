@@ -2,6 +2,8 @@ import React from 'react';
 import { HomeIcon, InformationCircleIcon, MailIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 import logoImage from '../../public/assets/humankind_cropped-removebg-preview.png';
+import { ConnectButton } from 'thirdweb/react';
+import ConnectWallet from './ConnectWallet';
 
 
 const Navbar = () => {
@@ -32,9 +34,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className="md:flex items-center space-x-4">
-          <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-300">
-            Connect Wallet
-          </button>
+          <ConnectWallet />
         </div>
       </div>
     </nav>
