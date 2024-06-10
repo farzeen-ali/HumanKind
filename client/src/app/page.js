@@ -1,12 +1,13 @@
+import "./globals.css";
+import CTASection from "../components/CTAsection";
+import FAQSection from "../components/FAQsection";
+import Feature from "../components/Feature";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
-import CTASection from "@/components/CTAsection";
-import FAQSection from "@/components/FAQsection";
-import Feature from "@/components/Feature";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
 
-import Navbar from "@/components/Navbar";
-import OwnersSection from "@/components/OwnerSection";
+import Navbar from "../components/Navbar";
+import OwnersSection from "../components/OwnerSection";
 
 
 export default function Home() {

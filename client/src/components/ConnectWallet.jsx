@@ -1,6 +1,6 @@
 import React from 'react';
 import { ConnectButton } from '../app/providers/ThirdwebProvider';
-import { chain, client } from '@/lib/thirdweb';
+import { chain, client } from '../lib/thirdweb';
 
 const ConnectWallet = () => {
   return (

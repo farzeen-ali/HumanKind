@@ -1,5 +1,6 @@
+
 import { Inter } from "next/font/google";
-import ConnectWallet from "@/components/ConnectWallet";
+import ConnectWallet from "../components/ConnectWallet"
 import { ThirdwebProvider } from "../app/providers/ThirdwebProvider";
 import "./globals.css";
 

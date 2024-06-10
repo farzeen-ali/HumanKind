@@ -13,18 +13,28 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@heroicons/react": "^1.0.6",
+    "@hookform/resolvers": "^3.6.0",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@thirdweb-dev/react": "^4.6.31",
+    "@thirdweb-dev/sdk": "^4.0.92",
+    "autoprefixer": "^10.4.19",
+    "ethers": "^5.7.2",
     "next": "14.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.51.5",
     "react-icons": "^5.2.1",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "thirdweb": "^5.28.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/react": "18.3.3",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
   }
 }

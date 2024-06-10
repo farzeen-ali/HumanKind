@@ -1,15 +1,17 @@
-import { createThirdwebClient } from "thirdweb";
-import { defineChain } from "thirdweb";
+// Import necessary modules
+import { createThirdwebClient, defineChain, getContract } from "thirdweb";
 import { sepolia } from "thirdweb/chains";
-import { getContract } from "thirdweb";
 
+
+// Create the Thirdweb client
 export const client = createThirdwebClient({
   clientId: process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID as string,
 });
- 
+
+// Define the chain
 export const chain = defineChain(sepolia);
 
-// get a contract
+// Get the contract with the updated ABI
 export const contract = getContract({
   client,
   chain,

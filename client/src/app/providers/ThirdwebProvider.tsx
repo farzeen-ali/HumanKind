@@ -1,2 +1,2 @@
 'use client'
-export { ThirdwebProvider, ConnectButton } from "thirdweb/react";
+export { ThirdwebProvider,ConnectButton } from "thirdweb/react";

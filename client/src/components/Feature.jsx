@@ -1,4 +1,13 @@
-import React from 'react';
+import Link from 'next/link';
+
+const campaigns = [
+  { name: 'Food Donations', image: '/assets/food-donation.jpg', path: '/start-campaign/food-donations', description: 'Help provide meals to those in need by supporting food donation campaigns.' },
+  { name: 'Healthcare Support', image: '/assets/healthcare-support.jpg', path: '/start-campaign/healthcare-support', description: 'Contribute to campaigns aimed at improving healthcare access and services.' },
+  { name: 'Educational Initiatives', image: '/assets/educational-initiatives.webp', path: '/start-campaign/educational-initiatives', description: 'Support educational campaigns to provide access to quality education for all.' },
+  { name: 'Environment Protection', image: '/assets/Environment-Protection.jpg', path: '/start-campaign/environment-protection', description: 'Join initiatives to protect and preserve our environment for future generations.' },
+  { name: 'Animal Welfare', image: '/assets/animal-welfare.jpeg', path: '/start-campaign/animal-welfare', description: 'Support campaigns to ensure the well-being and rights of animals.' },
+  { name: 'Community Development', image: '/assets/community_development.jpg', path: '/start-campaign/community-development', description: 'Contribute to projects that empower and uplift communities.' },
+];
 
 const Feature = () => {
   return (
@@ -8,68 +17,18 @@ const Feature = () => {
         Ready to make a difference? Start by creating or supporting campaigns that matter to you.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-          <img src="/assets/food-donation.jpg" alt="Food Donations" className="w-full h-40 object-cover rounded mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Food Donations</h3>
-          <p className="text-gray-700">
-            Help provide meals to those in need by supporting food donation campaigns.
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-            Start Campaign
-          </button>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-          <img src="/assets/healthcare-support.jpg" alt="Healthcare Support" className="w-full h-40 object-cover rounded mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Healthcare Support</h3>
-          <p className="text-gray-700">
-            Contribute to campaigns aimed at improving healthcare access and services.
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-            Start Campaign
-          </button>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-          <img src="/assets/educational-initiatives.webp" alt="Educational Initiatives" className="w-full h-40 object-cover rounded mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Educational Initiatives</h3>
-          <p className="text-gray-700">
-            Support educational campaigns to provide access to quality education for all.
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-            Start Campaign
-          </button>
-        </div>
-        {/* Additional campaign categories */}
-        <div className="bg-white p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-          <img src="/assets/Environment-Protection.jpg" alt="Environment Protection" className="w-full h-40 object-cover rounded mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Environment Protection</h3>
-          <p className="text-gray-700">
-            Join initiatives to protect and preserve our environment for future generations.
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-            Start Campaign
-          </button>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-          <img src="/assets/animal-welfare.jpeg" alt="Animal Welfare" className="w-full h-40 object-cover rounded mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Animal Welfare</h3>
-          <p className="text-gray-700">
-            Support campaigns to ensure the well-being and rights of animals.
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-            Start Campaign
-          </button>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-          <img src="/assets/community_development.jpg" alt="Community Development" className="w-full h-40 object-cover rounded mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Community Development</h3>
-          <p className="text-gray-700">
-            Contribute to projects that empower and uplift communities.
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-            Start Campaign
-          </button>
-        </div>
-        {/* Add more campaign categories here */}
+        {campaigns.map((campaign, index) => (
+          <div key={index} className="bg-white p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
+            <img src={campaign.image} alt={campaign.name} className="w-full h-40 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold mb-2">{campaign.name}</h3>
+            <p className="text-gray-700">{campaign.description}</p>
+            <Link href={campaign.path}>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+                Start Campaign
+              </button>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );
