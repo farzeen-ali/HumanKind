@@ -1,5 +1,6 @@
 import React from 'react';
 import { HomeIcon, InformationCircleIcon, MailIcon } from '@heroicons/react/outline';
+
 import Image from 'next/image';
 import logoImage from '../../public/assets/humankind_cropped-removebg-preview.png';
 import { ConnectButton } from 'thirdweb/react';

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -14,9 +15,11 @@ const Hero = () => {
           Join us in making a difference. <br /> Every contribution counts.
         </p>
         <div>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 animate-bounceIn">
-            Donate Now
-          </button>
+          <Link href="/donate">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 animate-bounceIn">
+              Donate Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

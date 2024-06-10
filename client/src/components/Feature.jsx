@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
 const campaigns = [
-  { name: 'Food Donations', image: '/assets/food-donation.jpg', path: '/start-campaign/food-donations', description: 'Help provide meals to those in need by supporting food donation campaigns.' },
-  { name: 'Healthcare Support', image: '/assets/healthcare-support.jpg', path: '/start-campaign/healthcare-support', description: 'Contribute to campaigns aimed at improving healthcare access and services.' },
-  { name: 'Educational Initiatives', image: '/assets/educational-initiatives.webp', path: '/start-campaign/educational-initiatives', description: 'Support educational campaigns to provide access to quality education for all.' },
-  { name: 'Environment Protection', image: '/assets/Environment-Protection.jpg', path: '/start-campaign/environment-protection', description: 'Join initiatives to protect and preserve our environment for future generations.' },
-  { name: 'Animal Welfare', image: '/assets/animal-welfare.jpeg', path: '/start-campaign/animal-welfare', description: 'Support campaigns to ensure the well-being and rights of animals.' },
-  { name: 'Community Development', image: '/assets/community_development.jpg', path: '/start-campaign/community-development', description: 'Contribute to projects that empower and uplift communities.' },
+  { name: 'Food Donations', image: '/assets/food-donation.jpg', path: '/food-donations', description: 'Help provide meals to those in need by supporting food donation campaigns.' },
+  { name: 'Healthcare Support', image: '/assets/healthcare-support.jpg', path: '/healthcare-support', description: 'Contribute to campaigns aimed at improving healthcare access and services.' },
+  { name: 'Educational Initiatives', image: '/assets/educational-initiatives.webp', path: '/educational-initiatives', description: 'Support educational campaigns to provide access to quality education for all.' },
+  { name: 'Environment Protection', image: '/assets/Environment-Protection.jpg', path: '/environment-protection', description: 'Join initiatives to protect and preserve our environment for future generations.' },
+  { name: 'Animal Welfare', image: '/assets/animal-welfare.jpeg', path: '/animal-welfare', description: 'Support campaigns to ensure the well-being and rights of animals.' },
+  { name: 'Community Development', image: '/assets/community_development.jpg', path: '/community-development', description: 'Contribute to projects that empower and uplift communities.' },
 ];
 
 const Feature = () => {
