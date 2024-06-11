@@ -1,7 +1,11 @@
 "use client"
-import React, { useState } from 'react';
+
+import { useAtom } from "jotai";
+import React, { useState } from "react";
+import { donationsAtom } from "../../State/atoms";
 
 const EducationPage = () => {
+  const [donations, setDonations] = useAtom(donationsAtom);
   const [formData, setFormData] = useState({
     campaignName: '',
     description: '',
@@ -20,8 +24,13 @@ const EducationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission, e.g., send data to the server
-    console.log(formData);
+    setDonations((don) => [
+      ...don,
+      {
+        type: "Educational",
+        data: formData,
+      },
+    ]);
   };
 
   return (

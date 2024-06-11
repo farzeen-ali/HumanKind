@@ -1,7 +1,12 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+
+import { useAtom } from "jotai";
+import React, { useState } from "react";
+import { donationsAtom } from "../../State/atoms";
 
 const AnimalPage = () => {
+  const [donations, setDonations] = useAtom(donationsAtom);
+
   const [formData, setFormData] = useState({
     campaignName: '',
     description: '',
@@ -20,8 +25,13 @@ const AnimalPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission, e.g., send data to the server
-    console.log(formData);
+    setDonations((don) => [
+      ...don,
+      {
+        type: "Animal Welfare",
+        data: formData,
+      },
+    ]);
   };
 
   return (
